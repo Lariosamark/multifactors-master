@@ -5,23 +5,23 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function LoginPageContent() {
-  const { loginWithGoogle, loading, profile } = useAuth();
-  const params = useSearchParams();
-  const pending = params.get("status") === "pending";
-  const router = useRouter();
+const { loginWithGoogle, loading, profile } = useAuth();
+const params = useSearchParams();
+const pending = params.get("status") === "pending";
+const router = useRouter();
 
   // ✅ Redirect when logged in & approved
-  useEffect(() => {
+useEffect(() => {
     if (profile) {
-      if (profile.role === "admin") {
+    if (profile.role === "admin") {
         router.push("/admin/dashboard");
-      } else if (profile.role === "employee" && profile.approved) {
+    } else if (profile.role === "employee" && profile.approved) {
         router.push("/employee/dashboard");
-      } else if (profile.role === "employee" && !profile.approved) {
+    } else if (profile.role === "employee" && !profile.approved) {
         router.push("/login?status=pending");
-      }
     }
-  }, [profile, router]);
+    }
+}, [profile, router]);
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#2D5128] via-[#1a3015] to-[#2D5128] flex items-center justify-center p-8 relative overflow-hidden">
         {/* Animated Background Elements */}
@@ -43,7 +43,7 @@ export default function LoginPageContent() {
                 </svg>
                 </div>
             <h1 className="text-4xl font-black mb-3 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-  Welcome Back
+Welcome Back
 </h1> 
                 <p className="text-white/80 text-lg">
                 Sign in with your Google account to continue
