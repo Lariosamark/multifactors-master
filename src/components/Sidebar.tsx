@@ -108,9 +108,11 @@ export default function Sidebar() {
                 </svg>
               </div>
               <div>
-                <div className="text-xl font-black text-white bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                  Multifactor Sales
-                </div>
+                <div>
+  <div className="text-xl font-black bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+    Multifactor Sales
+  </div>
+</div>
                 <div className="text-xs text-green-300/80">
                   Quotation Management System
                 </div>

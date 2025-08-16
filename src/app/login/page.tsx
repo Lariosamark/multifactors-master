@@ -1,4 +1,4 @@
-  "use client";
+"use client";
 
 import { useAuth } from "@/context/AuthContext";
 import { useSearchParams, useRouter } from "next/navigation";
@@ -43,9 +43,9 @@ export default function LoginPage() {
                     <path fillRule="evenodd" d="M18 8a6 6 0 01-7.743 5.743L10 14l-0.257-0.257A6 6 0 1118 8zM2 8a8 8 0 1016 0A8 8 0 002 8zm8-3a3 3 0 100 6 3 3 0 000-6z" clipRule="evenodd"></path>
                 </svg>
                 </div>
-                <h1 className="text-4xl font-black text-white mb-3 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                Welcome Back
-                </h1>
+               <h1 className="text-4xl font-black mb-3 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+  Welcome Back
+</h1> 
                 <p className="text-white/80 text-lg">
                 Sign in with your Google account to continue
                 </p>
